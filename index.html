@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the current weather information for any location. Enter a city name and instantly see the temperature, weather description, and more. Stay informed about the weather conditions with our easy-to-use Weather Website.">
+    <meta name="author" content="Olaoluwa Akinfenwa">
+    <meta name="robots" content="index, follow">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/7624c7c0d1.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <form onsubmit="event.preventDefault(); getWeather()">
+        <input type="text" id="locationInput" placeholder="Enter location" autocomplete="off">
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherIcon"></div>
+    <div id="weatherTemperature" data-temperature=""></div>
+    <div id="temperatureButtons">
+      <button onclick="convertTemperature(event, 'C')">Celsius</button>
+      <button onclick="convertTemperature(event, 'F')">Fahrenheit</button>
+      <button onclick="convertTemperature(event, 'K')">Kelvin</button>
+    </div>
+    <div id="forecast"></div>
+    <div id="historicalWeather"></div>
+   
+</div>
+    <footer>
+        <p>&copy; 2023 Olaoluwa Akinfenwa. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/olaoluwa-akinfenwa-b44026208" class="linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/hawsome_a" class="twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:awesome.akinfenwa@outlook.com" class="email" target="_blank">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
