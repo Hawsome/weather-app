@@ -1,0 +1,100 @@
+HTML:
+
+1. `<!DOCTYPE html>`: This declaration at the beginning of the code specifies that the document is an HTML5 document.
+
+2. `<html>`: The `<html>` element is the root element of an HTML page and contains all other elements.
+
+3. `<head>`: The `<head>` element provides metadata and includes elements that are not directly displayed on the webpage. It contains various tags such as `<meta>`, `<title>`, `<link>`, and `<script>`.
+
+   - `<meta charset="utf-8">`: Specifies the character encoding for the document (UTF-8 encoding is commonly used).
+   - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Sets the viewport properties for responsive design on different devices.
+   - `<meta name="description" content="...">`: Provides a brief description of the webpage for search engines and social media.
+   - `<meta name="author" content="...">`: Specifies the author of the webpage.
+   - `<meta name="robots" content="...">`: Informs search engine crawlers how to handle indexing and following links on the webpage.
+   - `<title>Weather App</title>`: Sets the title of the webpage displayed on the browser's title bar or tab.
+
+4. `<link>`: Specifies external CSS stylesheets and other resources.
+
+   - `<link rel="stylesheet" type="text/css" href="style.css">`: Links the CSS file "style.css" to the HTML document for styling the webpage.
+   - `<link rel="apple-touch-icon" ...>`: Specifies an icon for Apple iOS devices when the webpage is saved to the home screen.
+   - `<link rel="icon" ...>`: Specifies the favicon (favorite icon) for the webpage, displayed in the browser's address bar or tabs.
+   - `<link rel="manifest" href="/site.webmanifest">`: Points to the web app manifest file that provides metadata for progressive web applications.
+
+5. `<body>`: The `<body>` element contains the visible content of the webpage.
+
+   - `<div class="container">`: A container element that wraps the entire content of the webpage.
+   - `<h1>Weather App</h1>`: The main heading of the webpage.
+   - `<form>`: A form element that allows users to input a location and submit the form.
+   - `<div id="weatherIcon"></div>`: A placeholder element to display the weather icon dynamically.
+   - `<div id="weatherTemperature" data-temperature=""></div>`: A placeholder element to display the current temperature dynamically. The temperature value is stored in the `data-temperature` attribute.
+   - `<div id="temperatureButtons">`: A container for temperature conversion buttons.
+   - `<div id="forecast"></div>`: A placeholder element to display the weather forecast.
+   - `<div id="historicalWeather"></div>`: A placeholder element to display historical weather information.
+   
+   Additionally, there's a `<footer>` element at the end of the page that contains copyright information and social media icons.
+
+6. `<script>`: Specifies JavaScript files and inline scripts.
+
+   - `<script src="script.js"></script>`: Links the JavaScript file "script.js" to the HTML document for dynamic behavior and interactivity.
+
+This HTML structure provides the foundation for a weather application webpage, including input fields, placeholders for weather data, and dynamic functionality through JavaScript.
+
+CSS: 
+
+1. Body Styles:
+   - `background-color`: Sets the background color of the entire webpage to a light gray color (#D3D3D3).
+   - `background-repeat`: Specifies that the background image should not be repeated.
+   - `background-size`: Sets the background image size to cover the entire background area.
+
+2. Weather Condition Styles:
+   - Each weather condition is assigned a specific class (e.g., `.clear-sky`, `.few-clouds`, etc.), and each class has a corresponding `background-color` property that defines the color for that weather condition.
+
+3. Container Styles:
+   - `.container`: Sets the maximum width of the container element to 400 pixels and centers it horizontally.
+   - `h1`: Sets the font size of the main heading to 24 pixels and adds a bottom margin of 20 pixels.
+   - `form`: Adds a bottom margin of 20 pixels to the form element.
+   - `input[type="text"]`: Defines the styling for text input fields.
+   - `button[type="submit"]`: Defines the styling for submit buttons.
+   - `#weatherInfo`: Sets the font size of the weather information to 18 pixels.
+   - `#weatherIcons`: Adds a top margin of 20 pixels to the weather icons.
+   - `#forecast`: Adds a top margin of 20 pixels to the forecast section.
+   - `#temperatureButtons`: Adds a top margin of 20 pixels to the temperature conversion buttons.
+   - `#temperatureButtons button`: Defines the styling for the temperature conversion buttons.
+   - `#temperatureButtons button.active`: Defines the styling for the active temperature conversion button.
+
+4. Other Styles:
+   - `.forecast-item`: Defines the styling for forecast items.
+   - `footer`: Defines the styling for the footer section.
+   - `.social-icons`: Defines the styling for the social media icons.
+   - `.social-icons a`: Defines the styling for the social media icon links.
+   - `.social-icons i`: Defines the styling for the social media icons.
+
+The CSS code provides a consistent and visually appealing design for the weather application webpage. It sets the background color, defines styles for various elements such as headings, input fields, buttons, weather information, and forecast items. It also styles the footer section and social media icons.
+
+JavaScript: 
+
+1. `getWeather()`: This function is called when the user submits the location form. It retrieves the user-entered location, constructs the API URL with the location and API key, and performs a fetch request to the OpenWeatherMap API to get the current weather data. It then calls other functions to display the weather data, weather icons, and the forecast.
+
+2. `displayWeather(data)`: This function is responsible for displaying the current weather information on the webpage. It retrieves the necessary data from the API response (`data`), creates HTML elements dynamically, sets their content, and appends them to the `weatherTemperature` element. It also calls the `changeBackgroundImage()` function to change the background image based on the weather condition.
+
+3. `displayWeatherIcons(data)`: This function displays the weather icon corresponding to the current weather condition. It retrieves the weather icon code from the API response (`data`), creates an `img` element dynamically, sets its source and alt attributes, and appends it to the `weatherIcon` element.
+
+4. `getForecast(location)`: This function fetches the weather forecast data for the specified location. It constructs the API URL with the location and API key, performs a fetch request, and processes the API response to display the forecast using the `displayForecast(data)` function.
+
+5. `displayForecast(data)`: This function displays the weather forecast on the webpage. It iterates over the forecast data, creates HTML elements dynamically for each forecast item, sets their content, and appends them to the `forecast` element.
+
+6. `convertTemperature(event, unit)`: This function is called when the user clicks on a temperature conversion button. It updates the temperature display by converting the temperature to the selected unit (Celsius, Fahrenheit, or Kelvin) using the `convertTemperatureUnit()` function.
+
+7. `convertTemperatureUnit(temperature, unit)`: This function converts the temperature from Kelvin to the selected unit (Celsius or Fahrenheit) based on the `unit` parameter.
+
+8. `getTemperatureUnitSymbol(unit)`: This function returns the symbol (°C, °F, or K) for the specified temperature unit.
+
+9. `autoCompleteLocation()`: This function is a placeholder for implementing autocomplete functionality for the location input field. It suggests location options as the user types, typically utilizing external libraries or APIs.
+
+10. `getHistoricalWeather(location, date)`: This function fetches historical weather data for a specific location and date. It constructs the API URL with the location, date, and API key, performs a fetch request, and displays the historical weather information using the `displayHistoricalWeather(data)` function. Note that the placeholders for latitude and longitude in the URL need to be replaced with actual values.
+
+11. `displayHistoricalWeather(data)`: This function is a placeholder for displaying the historical weather information on the webpage. It can be implemented by creating HTML elements dynamically to show the historical data.
+
+12. `changeBackgroundImage(weatherCondition)`: This function changes the background image of the webpage based on the weather condition. It updates the `className` of the `body` element to a specific class name corresponding to the weather condition. The CSS styles associated with the class names are defined in the CSS code you provided earlier.
+
+These functions work together to fetch weather data, display it on the webpage, handle temperature conversions, and provide functionality for historical weather data and autocomplete location input.
