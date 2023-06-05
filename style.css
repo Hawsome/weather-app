@@ -1,0 +1,176 @@
+body {
+  background-color: #D3D3D3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+.clear-sky {
+  background-color: #78bfff;
+}
+
+.few-clouds {
+  background-color: #d3d3d3;
+}
+
+.scattered-clouds {
+  background-color: #d3d3d3;
+}
+
+.broken-clouds {
+  background-color: #d3d3d3;
+}
+
+.overcast-clouds {
+  background-color: #808080;
+}
+
+.shower-rain {
+  background-color: #a9c4d4;
+}
+
+.moderate-rain {
+  background-color: #6699CC;
+}
+
+.light-rain {
+  background-color: #6699FF;
+}
+
+.rain {
+  background-color: #808080;
+}
+
+.thunderstorm {
+  background-color: #474747;
+}
+
+.thunderstorm-with-rain {
+  background-color: #336699;
+}
+
+.snow {
+  background-color: #ffffff;
+}
+
+.mist {
+  background-color: #e6e6e6;
+}
+
+.overclast-clouds {
+  background-color: #CCCCCC;
+}
+
+/* Add more classes and colors for additional weather conditions if needed */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#weatherInfo {
+  font-size: 18px;
+}
+
+#weatherIcons {
+  margin-top: 20px;
+}
+
+#forecast {
+  margin-top: 20px;
+}
+
+#temperatureButtons {
+  margin-top: 20px;
+}
+
+#temperatureButtons button {
+  padding: 8px 16px;
+  background-color: #eee;
+  color: #333;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#temperatureButtons button.active {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.forecast-item {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  color: #888;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+}
+
+.social-icons i {
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover i {
+  color: #171b82;
+}
+
+.social-icons a.linkedin:hover i {
+  color: #0A66C2;
+}
+
+.social-icons a.twitter:hover i {
+  color: #00acee;
+}
+
+.social-icons a.email:hover i {
+  color: #171b82;
+}
