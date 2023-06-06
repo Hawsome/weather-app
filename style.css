@@ -1,8 +1,5 @@
 body {
   background-color: #D3D3D3;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-position: center; */
 }
 
 .clear-sky {
@@ -61,8 +58,6 @@ body {
   background-color: #CCCCCC;
 }
 
-/* Add more classes and colors for additional weather conditions if needed */
-
 .container {
   max-width: 400px;
   margin: 0 auto;
@@ -95,6 +90,10 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+button[type="submit"]:hover {
+  background-color: #66b3ff;
+}
+
 #weatherInfo {
   font-size: 18px;
 }
@@ -124,6 +123,21 @@ button[type="submit"] {
 
 #temperatureButtons button.active {
   background-color: #0077cc;
+  color: #fff;
+}
+
+#temperatureButtons button#Celcius:hover {
+  background-color: #ADD8E6;
+  color: #fff;
+}
+
+#temperatureButtons button#Fahrenheit:hover {
+  background-color: #FFA07A;
+  color: #fff;
+}
+
+#temperatureButtons button#Kelvin:hover {
+  background-color: #800080;
   color: #fff;
 }
 
@@ -173,4 +187,58 @@ footer {
 
 .social-icons a.email:hover i {
   color: #171b82;
+}
+
+.go-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0077cc;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 999;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.go-up:hover {
+  background-color: #005fa3;
+  transform: scale(1.1);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: #D3D3D3;
+  }
+
+  button[type="submit"] {
+    margin-top: 15px;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: #D3D3D3;
+  }
+  
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  body {
+    background-color: #D3D3D3;
+  }
+  
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  body {
+    background-color: #D3D3D3;
+  }
+  
 }
