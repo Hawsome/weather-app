@@ -6,8 +6,9 @@
     <meta name="description" content="Get the current weather information for any location. Enter a city name and instantly see the temperature, weather description, and more. Stay informed about the weather conditions with our easy-to-use Weather Website.">
     <meta name="author" content="Olaoluwa Akinfenwa">
     <meta name="robots" content="index, follow">
-    <title>Weather App</title>
+    <title>Weather Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/7624c7c0d1.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="images/favicon-32x32.png">
@@ -16,7 +17,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Weather App</h1>
+    <h1>Weather Website</h1>
     <form onsubmit="event.preventDefault(); getWeather()">
         <input type="text" id="locationInput" placeholder="Enter location" autocomplete="off">
         <button type="submit">Get Weather</button>
@@ -24,9 +25,9 @@
     <div id="weatherIcon"></div>
     <div id="weatherTemperature" data-temperature=""></div>
     <div id="temperatureButtons">
-      <button onclick="convertTemperature(event, 'C')">Celsius</button>
-      <button onclick="convertTemperature(event, 'F')">Fahrenheit</button>
-      <button onclick="convertTemperature(event, 'K')">Kelvin</button>
+      <button onclick="convertTemperature(event, 'C')" id="Celcius">Celsius</button>
+      <button onclick="convertTemperature(event, 'F')" id="Fahrenheit">Fahrenheit</button>
+      <button onclick="convertTemperature(event, 'K')" id="Kelvin">Kelvin</button>
     </div>
     <div id="forecast"></div>
     <div id="historicalWeather"></div>
@@ -47,5 +48,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <a href="#top" class="go-up" id="go-up-icon" style="display: none;"><i class="fas fa-arrow-up"></i></a>
 </body>
-</html>
+</html>"
