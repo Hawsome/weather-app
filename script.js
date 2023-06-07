@@ -44,7 +44,7 @@ function displayWeather(data) {
   cityElement.textContent = 'City: ' + cityName;
 
   var tempElement = document.createElement('p');
-  tempElement.textContent = 'Temperature: ' + temperature.toFixed(2) + '°C';
+  tempElement.textContent = 'Temperature: ' + temperature.toFixed(2) + 'K';
 
   var descElement = document.createElement('p');
   descElement.textContent = 'Description: ' + description;
@@ -53,7 +53,7 @@ function displayWeather(data) {
   weatherTemperature.appendChild(tempElement);
   weatherTemperature.appendChild(descElement);
 
-  changeBackgroundImage(description); // Call the function to change the background image
+  changeBackgroundColor(description); // Call the function to change the background image
 }
 
 function displayWeatherIcons(data) {
@@ -108,7 +108,7 @@ function displayForecast(data) {
     forecastDateTimeElement.textContent = 'Date/Time: ' + forecastDateTime;
 
     var forecastTemperatureElement = document.createElement('p');
-    forecastTemperatureElement.textContent = 'Temperature: ' + forecastTemperature + '°C';
+    forecastTemperatureElement.textContent = 'Temperature: ' + forecastTemperature + 'K';
 
     var forecastDescriptionElement = document.createElement('p');
     forecastDescriptionElement.textContent = 'Description: ' + forecastDescription;
@@ -159,7 +159,7 @@ function convertTemperatureUnit(temperature, unit) {
   if (unit === 'C') {
     return temperature - 273.15; // Convert from Kelvin to Celsius
   } else if (unit === 'F') {
-    return (temperature - 273.15) * 1.8 + 32; // Convert from Kelvin to Fahrenheit
+    return (temperature - 273.15) * 9/5 + 32; // Convert from Kelvin to Fahrenheit
   } else {
     return temperature; // Return temperature as is
   }
@@ -173,11 +173,6 @@ function getTemperatureUnitSymbol(unit) {
   } else {
     return 'K';
   }
-}
-
-function autoCompleteLocation() {
-  // Implement autocomplete functionality for location input
-  // You can use libraries like Google Places Autocomplete or other autocomplete libraries
 }
 
 function getHistoricalWeather(location, date) {
@@ -203,13 +198,8 @@ function getHistoricalWeather(location, date) {
     });
 }
 
-function displayHistoricalWeather(data) {
-  // Implement the display of historical weather information
-  // You can create HTML elements dynamically to show the historical data
-}
-
-// Function to change the background image based on the weather condition
-function changeBackgroundImage(weatherCondition) {
+// Function to change the background color based on the weather condition
+function changeBackgroundColor(weatherCondition) {
 var body = document.querySelector('body');
 var backgroundColor;
 
